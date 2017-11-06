@@ -1,0 +1,555 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Web Form Application</title>
+    <meta charset="utf-8" />
+    <link href="css/style.css" rel="stylesheet" media="all">
+    <script src="js/jquery.min.js"></script>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet" media="all">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+    <script src="js/validator.js"></script>
+    <script src="js/jspdf.debug.js"></script>
+
+</head>
+
+<body>
+
+    <div class="header">
+        <nav class="navbar navbar-default">
+            <div class="container title">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <span>A threat Modelling for Securing E-Commerce Applications</span>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+
+
+    <ul class="nav nav-tabs" id="navbar-tabs">
+        <li class="active"><a href="#tab1" data-toggle="tab">Form A</a></li>
+        <li><a href="#tab2" data-toggle="tab">Form B</a></li>
+        <li><a href="#tab3" data-toggle="tab">Form C</a></li>
+        <li><a href="#tab4" data-toggle="tab">Form D</a></li>
+        <li><a href="#tab5" data-toggle="tab">Form E</a></li>
+    </ul>
+
+
+
+
+    <div class="tab-content">
+        <div class="tab-pane active" id="tab1">
+
+            <form id="form-a" data-toggle="validator" role="form">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-12">
+
+                            <div style="margin-bottom: 20px;">
+                                <h3>About</h3>
+                                <span>
+                                The website is into threat model technique used in securing e-commerce applications online and will be more focused on imbedded it into the SDLC of e-commerce application's before it is being develop and after the has being developed. To stand the best possible chance against cyber-criminal activities towards e-commerce applications. The benefit of the web to these businesses has being. overwhelming until the recent global internet security and spying of company's vital data became an issue. The issues prompted the awareness of many e-commerce companies to securing of their new and existing customer's personal information using e-commerce application. This also lead to the hunting down to track cyber-criminals attacking e-commerce applications and websites. 
+                            </span>
+                                <h3>Goals</h3>
+                                <span>
+                                The new threat modelling process can be decomposed into 3 high level steps namely; 
+                                <ul>
+                                    <li>Application Decomposition.</li>
+                                    <li>Determining high ranking threats.</li>
+                                    <li>Determining possible countermeasures and mitigation.</li>
+                                </ul>
+                            </span>
+                            </div>
+
+                            <div class="form-title">Form A - Application info</div>
+
+                            <div class="form-horizontal" id="form-a-table">
+                                <table class="table table-bordered">
+                                    <thead>
+                                        <tr>
+                                            <th>Name</th>
+                                            <th>Value</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Applicaiton name</td>
+                                            <td><input type="text" class="form-control" name="fc1-1" required></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Application version</td>
+                                            <td><input type="text" class="form-control" name="fc1-1" required></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Application description</td>
+                                            <td><input type="text" class="form-control" name="fc1-1" required></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Developer name</td>
+                                            <td><input type="text" class="form-control" name="fc1-1" required></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Application user</td>
+                                            <td><input type="text" class="form-control" name="fc1-1" required></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Application threat review</td>
+                                            <td><input type="text" class="form-control" name="fc1-1" required></td>
+                                        </tr>
+                                        <tr>
+                                            <td>User and Session Management</td>
+                                            <td><input type="text" class="form-control" name="fc1-1" required></td>
+                                        </tr>
+                                        <tr>
+                                            <td>External application</td>
+                                            <td><input type="text" class="form-control" name="fc1-1" required></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-btns">
+                        <button type="submit" class="btn btn-primary btnNext">Next</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+
+        <div class="tab-pane" id="tab2">
+
+            <form id="form-b" data-toggle="validator" role="form">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="form-title">Form B - Application Entry Point</div>
+                            <div id="form-b-table">
+                                <table class="table table-bordered">
+                                    <thead>
+                                        <tr>
+                                            <th>ID</th>
+                                            <th>Name of threat</th>
+                                            <th>Description of threat</th>
+                                            <th>Threat level</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><input type="text" class="form-control" name="fb1-0" required></td>
+                                            <td><input type="text" class="form-control" name="fb1-1" required></td>
+                                            <td><input type="text" class="form-control" name="fb1-2" required></td>
+                                            <td>
+                                                <select class="form-control" id="fb1-3">
+                                            <option>High</option>
+                                            <option>Low</option>
+                                            <option>Medium</option>
+                                        </select>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div><a class="form-b-entry" href="#">add new entry</a></div>
+                        </div>
+                    </div>
+                    <div class="form-btns">
+                        <a class="btn btn-primary btnPrevious">Prev</a>
+                        <button type="submit" class="btn btn-primary btnNext">Next</button>
+                    </div>
+                </div>
+            </form>
+
+
+        </div>
+
+
+        <div class="tab-pane" id="tab3">
+
+            <form id="form-c" data-toggle="validator" role="form">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="form-title">Form C - Application Assets</div>
+                            <div id="form-c-table">
+                                <table class="table table-bordered">
+                                    <thead>
+                                        <tr>
+                                            <th>ID</th>
+                                            <th>Name of assets</th>
+                                            <th>Description of assets</th>
+                                            <th>Threat level</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><input type="text" class="form-control" name="fc1-0" required></td>
+                                            <td><input type="text" class="form-control" name="fc1-1" required></td>
+                                            <td><input type="text" class="form-control" name="fc1-2" required></td>
+                                            <td>
+                                                <select class="form-control" id="fc1-3">
+                                            <option>High</option>
+                                            <option>Low</option>
+                                            <option>Medium</option>
+                                        </select>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div><a class="form-c-entry" href="#">add new entry</a></div>
+                        </div>
+                    </div>
+                    <div class="form-btns">
+                        <a class="btn btn-primary btnPrevious">Prev</a>
+                        <button type="submit" class="btn btn-primary btnNext">Next</button>
+                    </div>
+                </div>
+            </form>
+
+        </div>
+
+        <div class="tab-pane" id="tab4">
+
+            <form id="form-d" data-toggle="validator" role="form">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="form-title">Form D - Security Data Flow Diagram</div>
+                            <div>
+                                <input id="file" name="fd1-0" type="file" required/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-btns">
+                        <a class="btn btn-primary btnPrevious">Prev</a>
+                        <button type="submit" class="btn btn-primary btnNext">Next</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <div class="tab-pane" id="tab5">
+
+            <div class="container select-form">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="form-title">Please select next form</div>
+                        <a class="btn btn-primary loadE1Form">Stride</a>
+                        <a class="btn btn-primary loadE2Form">ASF Threat & Countermeasures List</a>
+                    </div>
+                </div>
+            </div>
+
+            <form id="form-e1" data-toggle="validator" role="form">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="form-title">Form E - Stride</div>
+                            <div id="form-e1-table">
+                                <table class="table table-bordered">
+                                    <thead>
+                                        <tr>
+                                            <th>Type of threat</th>
+                                            <th>Example</th>
+                                            <th>Impact</th>
+                                            <th>Possibility</th>
+                                            <th>Easy of exploitation</th>
+                                            <th>Security control</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Spoofing</td>
+                                            <td><input type="text" class="form-control" name="fe2-1" required></td>
+                                            <td><input type="text" class="form-control" name="fe2-2" required></td>
+                                            <td><input type="text" class="form-control" name="fe2-3" required></td>
+                                            <td><input type="text" class="form-control" name="fe2-4" required></td>
+                                            <td><input type="text" class="form-control" name="fe2-5" required></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Tampering </td>
+                                            <td><input type="text" class="form-control" name="fe2-1" required></td>
+                                            <td><input type="text" class="form-control" name="fe2-2" required></td>
+                                            <td><input type="text" class="form-control" name="fe2-3" required></td>
+                                            <td><input type="text" class="form-control" name="fe2-4" required></td>
+                                            <td><input type="text" class="form-control" name="fe2-5" required></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Repudiation</td>
+                                            <td><input type="text" class="form-control" name="fe2-1" required></td>
+                                            <td><input type="text" class="form-control" name="fe2-2" required></td>
+                                            <td><input type="text" class="form-control" name="fe2-3" required></td>
+                                            <td><input type="text" class="form-control" name="fe2-4" required></td>
+                                            <td><input type="text" class="form-control" name="fe2-5" required></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Information disclosure</td>
+                                            <td><input type="text" class="form-control" name="fe2-1" required></td>
+                                            <td><input type="text" class="form-control" name="fe2-2" required></td>
+                                            <td><input type="text" class="form-control" name="fe2-3" required></td>
+                                            <td><input type="text" class="form-control" name="fe2-4" required></td>
+                                            <td><input type="text" class="form-control" name="fe2-5" required></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Denial of service</td>
+                                            <td><input type="text" class="form-control" name="fe2-1" required></td>
+                                            <td><input type="text" class="form-control" name="fe2-2" required></td>
+                                            <td><input type="text" class="form-control" name="fe2-3" required></td>
+                                            <td><input type="text" class="form-control" name="fe2-4" required></td>
+                                            <td><input type="text" class="form-control" name="fe2-5" required></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Elevation of privilege</td>
+                                            <td><input type="text" class="form-control" name="fe2-1" required></td>
+                                            <td><input type="text" class="form-control" name="fe2-2" required></td>
+                                            <td><input type="text" class="form-control" name="fe2-3" required></td>
+                                            <td><input type="text" class="form-control" name="fe2-4" required></td>
+                                            <td><input type="text" class="form-control" name="fe2-5" required></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-btns">
+                        <a class="btn btn-primary btnPrevious">Prev</a>
+                        <button type="submit" class="save btn btn-primary">Save</button>
+                    </div>
+                </div>
+            </form>
+
+            <form id="form-e2" data-toggle="validator" role="form">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="form-title">Form E - ASF Threat & Countermeasures List</div>
+                            <div id="form-e2-table">
+                                <table class="table table-bordered">
+                                    <thead>
+                                        <tr>
+                                            <th>Threat type</th>
+                                            <th>Countermeasure</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Authentication</td>
+                                            <td><input type="text" class="form-control" name="fc1-1" required></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Authorization</td>
+                                            <td><input type="text" class="form-control" name="fc1-1" required></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Configuration Management</td>
+                                            <td><input type="text" class="form-control" name="fc1-1" required></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Data Protection in Storage and Transit</td>
+                                            <td><input type="text" class="form-control" name="fc1-1" required></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Data Validation / Parameter Validation</td>
+                                            <td><input type="text" class="form-control" name="fc1-1" required></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Error Handling and Exception Management</td>
+                                            <td><input type="text" class="form-control" name="fc1-1" required></td>
+                                        </tr>
+                                        <tr>
+                                            <td>User and Session Management</td>
+                                            <td><input type="text" class="form-control" name="fc1-1" required></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Auditing and Logging</td>
+                                            <td><input type="text" class="form-control" name="fc1-1" required></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-btns">
+                        <a class="btn btn-primary btnPrevious">Prev</a>
+                        <button type="submit" class="save btn btn-primary">Save</button>
+                    </div>
+                </div>
+            </form>
+
+        </div>
+
+    </div>
+
+
+    <script type="text/javascript">
+        // global vars
+        var form = {
+
+            savePdf: function() {
+
+                var files = document.getElementById('file').files;
+                var reader = new FileReader();
+                reader.readAsDataURL(files[0]);
+
+                reader.onload = function() {
+
+                    var doc = new jsPDF({
+                        orientation: 'landscape'
+                    });
+
+
+                    doc.fromHTML($('#form-a-table').html() + '</br>', 10, 10);
+                    doc.addPage();
+
+                    doc.fromHTML($('#form-b-table').html() + '</br>', 10, 10);
+                    doc.addPage();
+
+                    doc.fromHTML($('#form-c-table').html() + '</br>', 10, 10);
+                    doc.addPage();
+
+
+                    var width = doc.internal.pageSize.width;
+                    var height = doc.internal.pageSize.height;
+
+                    doc.addImage(reader.result, 'JPEG', 10, 10, 180, 160);
+                    doc.addPage();
+
+                    doc.fromHTML($('.use4pdf').html() + '</br>', 10, 10);
+                    doc.save('a4.pdf');
+
+                    location.reload();
+
+                };
+                reader.onerror = function(error) {
+                    console.log('Error: ', error);
+                };
+            },
+
+            loadHandlers: function() {
+
+                console.log('loadHandlers');
+
+                // handler for save button
+                $('.save').click(function(e) {
+
+                    e.preventDefault();
+                    $('.active').hide();
+
+
+                    $('input[type=text]').each(function() {
+                        var val = $(this).val();
+                        var parent = $(this).parent();
+                        parent.html(val);
+                    });
+
+                    $('select').each(function() {
+                        var val = $(this).val();
+                        var parent = $(this).parent();
+                        parent.html(val);
+                    });
+
+                    form.savePdf();
+
+
+                });
+
+
+                // handler for next and prev buttons
+                $('.btnNext').click(function(e) {
+                    e.preventDefault();
+                    $('.nav-tabs > .active').next('li').find('a').trigger('click');
+                });
+
+                $('.btnPrevious').click(function(e) {
+                    $('.nav-tabs > .active').prev('li').find('a').trigger('click');
+                });
+
+
+                // handler add new entry button
+                $('.form-b-entry').click(function(e) {
+                    e.preventDefault();
+                    $('#form-b table tbody').append(
+                        '<tr>' +
+                        '<td><input type="text" class="form-control" name="fb2-0" required></td>' +
+                        '<td><input type="text" class="form-control" name="fb2-1" required></td>' +
+                        '<td><input type="text" class="form-control" name="fb2-2" required></td>' +
+                        '<td>' +
+                        '<select class="form-control" id="fb1-3">' +
+                        '<option>High</option>' +
+                        '<option>Low</option>' +
+                        '<option>Medium</option>' +
+                        '</select>' +
+                        '</td>' +
+                        '</tr>'
+                    );
+                    $('#form-b').validator();
+
+                });
+
+
+                // handler add new entry button
+                $('.form-c-entry').click(function(e) {
+                    e.preventDefault();
+                    $('#form-c table tbody').append(
+                        '<tr>' +
+                        '<td><input type="text" class="form-control" name="fc2-0" required></td>' +
+                        '<td><input type="text" class="form-control" name="fc2-1" required></td>' +
+                        '<td><input type="text" class="form-control" name="fc2-2" required></td>' +
+                        '<td>' +
+                        '<select class="form-control" id="fc1-3">' +
+                        '<option>High</option>' +
+                        '<option>Low</option>' +
+                        '<option>Medium</option>' +
+                        '</select>' +
+                        '</td>' +
+                        '</tr>'
+                    );
+                    $('#form-b').validator();
+
+                });
+
+
+                // handler for load E1 form button
+                $('.loadE1Form').click(function(e) {
+                    $('#form-e2').hide();
+                    $('.select-form').hide();
+                    $('#form-e1').show();
+                    $('#form-e1-table').addClass('use4pdf');
+                });
+
+                // handler for load E2 form button
+                $('.loadE2Form').click(function(e) {
+                    $('#form-e1').hide();
+                    $('.select-form').hide();
+                    $('#form-e2').show();
+                    $('#form-e2-table').addClass('use4pdf');
+                });
+
+
+            }
+
+
+        };
+
+
+
+        $(document).ready(function() {
+
+            form.loadHandlers();
+
+        });
+    </script>
+
+
+</body>
+
+</html>

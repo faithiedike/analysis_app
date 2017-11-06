@@ -1,0 +1,40 @@
+.navbar {
+    min-height: inherit;
+}
+
+.header .title {
+    text-align: center;
+    padding: 10px 0px;
+    font-size: 16px;
+    color: #87cefa;
+    background-color: #aaa;
+}
+
+.form-title {
+    padding: 6px 0px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    background: #aaa;
+    color: #fff;
+    margin: 10px 0px 20px 0px;
+}
+
+.table {
+    margin-bottom: 10px;
+}
+
+#navbar-tabs {
+    display: none;
+}
+
+.form-btns {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    color: #ff0000;
+}
+
+#form-e1,
+#form-e2 {
+    display: none;
+}
