@@ -400,7 +400,6 @@
                         orientation: 'landscape'
                     });
 
-
                     doc.fromHTML($('#form-a-table').html() + '</br>', 10, 10);
                     doc.addPage();
 
@@ -456,7 +455,6 @@
 
                 });
 
-
                 // handler for next and prev buttons
                 $('.btnNext').click(function(e) {
                     e.preventDefault();
@@ -466,7 +464,6 @@
                 $('.btnPrevious').click(function(e) {
                     $('.nav-tabs > .active').prev('li').find('a').trigger('click');
                 });
-
 
                 // handler add new entry button
                 $('.form-b-entry').click(function(e) {
@@ -488,7 +485,6 @@
                     $('#form-b').validator();
 
                 });
-
 
                 // handler add new entry button
                 $('.form-c-entry').click(function(e) {
