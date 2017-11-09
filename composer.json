@@ -1,0 +1,12 @@
+{
+    "name": "williamnwogbo/webform2",
+    "authors": [
+        {
+            "name": "William Nwogbo",
+            "email": "williamnwogbo@gmail.com"
+        }
+    ],
+    "require": {
+        "spatie/ssl-certificate": "^1.11"
+    }
+}
